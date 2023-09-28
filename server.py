@@ -12,7 +12,7 @@ class Server:
 def handle_client(server):
     data, address = server.sock.recvfrom(server.buffsize)
     message = data.decode()
-    print(f'print: {message}')
+    print(f'print: {message}:{address}')
     server.sock.sendto(data,address)
     
 def main():

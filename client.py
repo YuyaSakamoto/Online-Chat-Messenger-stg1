@@ -16,8 +16,9 @@ def send_message():
     udp_sock.sendto(full_message, (server_address, server_port))
 
 def main():
-    send_message()
-    recv_message()
+    while True:
+        send_message()
+        recv_message()
 
 if __name__=="__main__":
     main()
